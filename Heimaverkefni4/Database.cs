@@ -36,7 +36,7 @@ namespace Heimaverkefni4
         {
             if (OpenConnection())
             {
-                query = "INSERT INTO customer_has_movie set customerid=🍤🍧🍧🍧🍧";
+                query = "INSERT INTO customer_has_movie set customerid='" + customerid + "'";
                 newsqlquery = new MySqlCommand(query,sqlconnection);
                 newsqlquery.ExecuteNonQuery();
                 CloseConnection();
