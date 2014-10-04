@@ -153,6 +153,8 @@ namespace Heimaverkefni4
             if (Database.Rent(vidskiptavinur[0],mynd[0],DateTime.Now.ToString(),DateTime.Now.ToString(),athugasemd))
             {
                 MessageBox.Show("Rented out " + mynd[1] + " to " + vidskiptavinur[2]);
+                RefreshCustomers();
+                RefreshMovies();
             }
         }
     }
