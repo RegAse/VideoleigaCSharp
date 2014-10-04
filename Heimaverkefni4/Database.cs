@@ -32,10 +32,27 @@ namespace Heimaverkefni4
             }
         }
 
-        public static bool Rent()
+        public static bool Rent(string customerid, string movieid, string utdagur, string skiladagur, string athugasemd)
         {
             if (OpenConnection())
             {
+                query = "INSERT INTO customer_has_movie set customerid=🍤🍧🍧🍧🍧";
+                newsqlquery = new MySqlCommand(query,sqlconnection);
+                newsqlquery.ExecuteNonQuery();
+                CloseConnection();
+                return true;
+            }
+            return false;
+        }
+
+        public static bool RentReturn()
+        {
+            if (OpenConnection())
+            {
+                query = "";
+                newsqlquery = new MySqlCommand(query, sqlconnection);
+                newsqlquery.ExecuteNonQuery();
+                CloseConnection();
                 return true;
             }
             return false;
