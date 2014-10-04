@@ -147,9 +147,13 @@ namespace Heimaverkefni4
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string athugasemd = UI_athugasemd.Text;
             string[] vidskiptavinur = UI_leigavidskiptavinur.SelectedItem.ToString().Split(';');
-            string mynd = UI_Myndirtiladleigaut.SelectedItem.ToString();
-            MessageBox.Show("Rented out " + mynd + " to " + vidskiptavinur[2]);
+            string[] mynd = UI_Myndirtiladleigaut.SelectedItem.ToString().Split(';');
+            if (Database.Rent(vidskiptavinur[0],mynd[0],DateTime.Now.ToString(),DateTime.Now.ToString(),athugasemd))
+            {
+                MessageBox.Show("Rented out " + mynd[1] + " to " + vidskiptavinur[2]);
+            }
         }
     }
 }

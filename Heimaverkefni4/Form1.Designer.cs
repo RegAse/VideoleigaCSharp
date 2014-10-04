@@ -85,6 +85,8 @@
             this.label24 = new System.Windows.Forms.Label();
             this.UI_pnafn = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.UI_athugasemd = new System.Windows.Forms.RichTextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -532,6 +534,8 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.label22);
+            this.tabPage6.Controls.Add(this.UI_athugasemd);
             this.tabPage6.Controls.Add(this.UI_pnafn);
             this.tabPage6.Controls.Add(this.label26);
             this.tabPage6.Controls.Add(this.UI_pkenni);
@@ -573,7 +577,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(242, 284);
+            this.button1.Location = new System.Drawing.Point(242, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -658,6 +662,23 @@
             this.label26.Size = new System.Drawing.Size(36, 15);
             this.label26.TabIndex = 10;
             this.label26.Text = "Nafn:";
+            // 
+            // UI_athugasemd
+            // 
+            this.UI_athugasemd.Location = new System.Drawing.Point(103, 284);
+            this.UI_athugasemd.Name = "UI_athugasemd";
+            this.UI_athugasemd.Size = new System.Drawing.Size(214, 53);
+            this.UI_athugasemd.TabIndex = 12;
+            this.UI_athugasemd.Text = "";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(16, 296);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(79, 15);
+            this.label22.TabIndex = 13;
+            this.label22.Text = "Athugasemd:";
             // 
             // Form1
             // 
@@ -744,6 +765,8 @@
         private System.Windows.Forms.ComboBox UI_leigavidskiptavinur;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.RichTextBox UI_athugasemd;
     }
 }
 

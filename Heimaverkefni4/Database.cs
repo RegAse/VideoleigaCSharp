@@ -36,7 +36,7 @@ namespace Heimaverkefni4
         {
             if (OpenConnection())
             {
-                query = "INSERT INTO customer_has_movie set customerid='" + customerid + "'";
+                query = "INSERT INTO customer_has_movie set Customer_ID='" + customerid + "',Movie_ID='" + movieid + "',Utdagur='" + utdagur + "',Skiladagur='" + skiladagur + "',Athugasemd='" + athugasemd + "',Buinadskila='0'";
                 newsqlquery = new MySqlCommand(query,sqlconnection);
                 newsqlquery.ExecuteNonQuery();
                 CloseConnection();
@@ -91,6 +91,7 @@ namespace Heimaverkefni4
                 sqlreader = newsqlquery.ExecuteReader();
                 while (sqlreader.Read())
                 {
+                    lina += (sqlreader.GetValue(0).ToString() + ";");
                     lina += (sqlreader.GetValue(1).ToString());
                     customer.Add(lina);
                     lina = null;
