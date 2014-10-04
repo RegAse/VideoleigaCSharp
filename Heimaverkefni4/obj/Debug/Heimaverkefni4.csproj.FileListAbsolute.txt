@@ -1,0 +1,10 @@
+C:\Users\Guðmundur\Documents\Visual Studio 2013\Projects\FOR2B2U\Heimaverkefni4\Heimaverkefni4\bin\Debug\Heimaverkefni4.exe.config
+C:\Users\Guðmundur\Documents\Visual Studio 2013\Projects\FOR2B2U\Heimaverkefni4\Heimaverkefni4\bin\Debug\Heimaverkefni4.exe
+C:\Users\Guðmundur\Documents\Visual Studio 2013\Projects\FOR2B2U\Heimaverkefni4\Heimaverkefni4\bin\Debug\Heimaverkefni4.pdb
+C:\Users\Guðmundur\Documents\Visual Studio 2013\Projects\FOR2B2U\Heimaverkefni4\Heimaverkefni4\bin\Debug\MySql.Data.dll
+C:\Users\Guðmundur\Documents\Visual Studio 2013\Projects\FOR2B2U\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.csprojResolveAssemblyReference.cache
+C:\Users\Guðmundur\Documents\Visual Studio 2013\Projects\FOR2B2U\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.Form1.resources
+C:\Users\Guðmundur\Documents\Visual Studio 2013\Projects\FOR2B2U\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.Properties.Resources.resources
+C:\Users\Guðmundur\Documents\Visual Studio 2013\Projects\FOR2B2U\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.csproj.GenerateResource.Cache
+C:\Users\Guðmundur\Documents\Visual Studio 2013\Projects\FOR2B2U\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.exe
+C:\Users\Guðmundur\Documents\Visual Studio 2013\Projects\FOR2B2U\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.pdb
