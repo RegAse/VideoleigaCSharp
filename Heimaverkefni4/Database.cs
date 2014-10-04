@@ -32,6 +32,15 @@ namespace Heimaverkefni4
             }
         }
 
+        public static bool Rent()
+        {
+            if (OpenConnection())
+            {
+                return true;
+            }
+            return false;
+        }
+
         public static List<string> AllRented()
         {
             List<string> customer = new List<string>();
@@ -139,6 +148,30 @@ namespace Heimaverkefni4
             {
                 query = "SELECT * FROM customer";
                 newsqlquery = new MySqlCommand(query,sqlconnection);
+
+                sqlreader = newsqlquery.ExecuteReader();
+                while (sqlreader.Read())
+                {
+                    for (int i = 0; i < sqlreader.FieldCount; i++)
+                    {
+                        lina += (sqlreader.GetValue(i).ToString()) + ";";
+                    }
+                    customer.Add(lina);
+                    lina = null;
+                }
+                CloseConnection();
+            }
+            return customer;
+        }
+
+        public static List<string> AllCustomersNF()
+        {
+            List<string> customer = new List<string>();
+            string lina = null;
+            if (OpenConnection())
+            {
+                query = "SELECT ID,Kennitala,Nafn FROM customer";
+                newsqlquery = new MySqlCommand(query, sqlconnection);
 
                 sqlreader = newsqlquery.ExecuteReader();
                 while (sqlreader.Read())

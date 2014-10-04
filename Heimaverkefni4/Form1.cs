@@ -43,6 +43,11 @@ namespace Heimaverkefni4
             {
                 UI_myndirekkiileigu.Items.Add(item);
             }
+            UI_Myndirtiladleigaut.Items.Clear();
+            foreach (string item in Database.AllNotRented())
+            {
+                UI_Myndirtiladleigaut.Items.Add(item);
+            }
         }
 
         private void RefreshCustomers()
@@ -51,6 +56,11 @@ namespace Heimaverkefni4
             foreach (string item in Database.AllCustomers())
             {
                 UI_allcustomers.Items.Add(item);
+            }
+            UI_leigavidskiptavinur.Items.Clear();
+            foreach (string item in Database.AllCustomersNF())
+            {
+                UI_leigavidskiptavinur.Items.Add(item);
             }
         }
 
@@ -121,6 +131,26 @@ namespace Heimaverkefni4
             UI_breytavidskiptanafn.Clear();
             UI_breytavidskiptasimi.Clear();
             UI_eydakennitala.Clear();
+        }
+
+        private void UI_leigavidskiptavinur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] vids = UI_leigavidskiptavinur.SelectedItem.ToString().Split(';');
+            UI_pid.Text = vids[0];
+            UI_pkenni.Text = vids[1];
+            UI_pnafn.Text = vids[2];
+        }
+
+        private void UI_Myndirtiladleigaut_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string[] vidskiptavinur = UI_leigavidskiptavinur.SelectedItem.ToString().Split(';');
+            string mynd = UI_Myndirtiladleigaut.SelectedItem.ToString();
+            MessageBox.Show("Rented out " + mynd + " to " + vidskiptavinur[2]);
         }
     }
 }
