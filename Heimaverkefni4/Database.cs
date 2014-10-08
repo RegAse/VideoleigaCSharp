@@ -36,7 +36,10 @@ namespace Heimaverkefni4
         {
             if (OpenConnection())
             {
-                query = "INSERT INTO customer_has_movie set Customer_ID='" + customerid + "',Movie_ID='" + movieid + "',Utdagur='" + utdagur + "',Skiladagur='" + skiladagur + "',Athugasemd='" + athugasemd + "',Buinadskila='0'";
+                DateTime dateValue = DateTime.Today;
+                string datefrom = dateValue.ToString("yyyy-MM-dd");
+                string dateto = dateValue.AddDays(3).ToString("yyyy-MM-dd");
+                query = "INSERT INTO customer_has_movie set Customer_ID='" + customerid + "',Movie_ID='" + movieid + "',Utdagur='" + datefrom + "',Skiladagur='" + dateto + "',Athugasemd='" + athugasemd + "',Buinadskila='0'";
                 newsqlquery = new MySqlCommand(query,sqlconnection);
                 newsqlquery.ExecuteNonQuery();
                 CloseConnection();
@@ -45,11 +48,11 @@ namespace Heimaverkefni4
             return false;
         }
 
-        public static bool RentReturn()
+        public static bool RentReturn(string movieid)
         {
             if (OpenConnection())
             {
-                query = "";
+                query = "UPDATE customer_has_movie set Buinadskila='1' WHERE Movie_ID='" + movieid + "'";
                 newsqlquery = new MySqlCommand(query, sqlconnection);
                 newsqlquery.ExecuteNonQuery();
                 CloseConnection();
@@ -70,6 +73,7 @@ namespace Heimaverkefni4
                 sqlreader = newsqlquery.ExecuteReader();
                 while (sqlreader.Read())
                 {
+                    lina += (sqlreader.GetValue(0).ToString() + ";");
                     lina += (sqlreader.GetValue(1).ToString());
                     customer.Add(lina);
                     lina = null;
@@ -93,6 +97,30 @@ namespace Heimaverkefni4
                 {
                     lina += (sqlreader.GetValue(0).ToString() + ";");
                     lina += (sqlreader.GetValue(1).ToString());
+                    customer.Add(lina);
+                    lina = null;
+                }
+                CloseConnection();
+            }
+            return customer;
+        }
+
+        public static List<string> AllNotRentedDetail()
+        {
+            List<string> customer = new List<string>();
+            string lina = null;
+            if (OpenConnection())
+            {
+                query = "SELECT NAfn, Utdagur, Skiladagur FROM customer_has_movie INNER JOIN movies ON movies.ID = Movie_ID WHERE Buinadskila = 0";
+                newsqlquery = new MySqlCommand(query, sqlconnection);
+                
+                sqlreader = newsqlquery.ExecuteReader();
+                while (sqlreader.Read())
+                {
+                    for (int i = 0; i < sqlreader.FieldCount; i++)
+                    {
+                        lina += (sqlreader.GetValue(i).ToString()) + " - ";
+                    }
                     customer.Add(lina);
                     lina = null;
                 }
@@ -208,10 +236,10 @@ namespace Heimaverkefni4
 
         public static void Connect()
         {
-            server = "localhost";
+            server = "tsuts.tskoli.is";
             database = "2105973019_forheima4";
-            uid = "root";
-            password = "";
+            uid = "2105973019";
+            password = "bobo1997";
 
             constring = "server= " + server + ";userid= " + uid + ";password= " + password + ";database= " + database;
 

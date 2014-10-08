@@ -12,7 +12,8 @@ namespace Heimaverkefni4
 {
     public partial class Form1 : Form
     {
-        
+        //Verkefni: Heimaverkefni 4
+        //Nafn: Guðmundur Axel
         public Form1()
         {
             InitializeComponent();
@@ -47,6 +48,16 @@ namespace Heimaverkefni4
             foreach (string item in Database.AllNotRented())
             {
                 UI_Myndirtiladleigaut.Items.Add(item);
+            }
+            UI_returnamoviemynd.Items.Clear();
+            foreach (string item in Database.AllRented())
+            {
+                UI_returnamoviemynd.Items.Add(item);
+            }
+            UI_skilautdagur.Items.Clear();
+            foreach (string item in Database.AllNotRentedDetail())
+            {
+                UI_skilautdagur.Items.Add(item);
             }
         }
 
@@ -156,6 +167,23 @@ namespace Heimaverkefni4
                 RefreshCustomers();
                 RefreshMovies();
             }
+        }
+
+        private void returnamovie_Click(object sender, EventArgs e)
+        {
+            string s = UI_returnamoviemynd.SelectedItem.ToString().Split(';')[0];
+            UI_returnamoviemynd.SelectedIndex = -1;
+            Database.RentReturn(s);
+            RefreshMovies();
+        }
+
+        private void newmovie_Click(object sender, EventArgs e)
+        {
+            string name = UI_newmoviename.Text;
+            string date = UI_newmovierelease.Value.ToString("yyyy-MM-dd");
+            Database.NewMovie(name,date);
+            RefreshMovies();
+            MessageBox.Show(name + " hefur verið skráð");
         }
     }
 }

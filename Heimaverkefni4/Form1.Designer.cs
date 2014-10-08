@@ -73,20 +73,33 @@
             this.UI_myndirileigu = new System.Windows.Forms.ListBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.UI_Myndirtiladleigaut = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.UI_leigavidskiptavinur = new System.Windows.Forms.ComboBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.UI_pid = new System.Windows.Forms.Label();
-            this.UI_pkenni = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.UI_athugasemd = new System.Windows.Forms.RichTextBox();
             this.UI_pnafn = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.UI_athugasemd = new System.Windows.Forms.RichTextBox();
-            this.label22 = new System.Windows.Forms.Label();
+            this.UI_pkenni = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.UI_pid = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.UI_leigavidskiptavinur = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.UI_Myndirtiladleigaut = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.UI_returnamoviemynd = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.returnamovie = new System.Windows.Forms.Button();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.UI_skilautdagur = new System.Windows.Forms.ListBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.UI_newmoviename = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.UI_newmovierelease = new System.Windows.Forms.DateTimePicker();
+            this.newmovie = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -95,6 +108,7 @@
             this.tabPage5.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -102,6 +116,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
@@ -127,7 +142,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(692, 394);
+            this.tabPage1.Size = new System.Drawing.Size(724, 426);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Viðskiptavinir";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -461,6 +476,12 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.newmovie);
+            this.tabPage2.Controls.Add(this.UI_newmovierelease);
+            this.tabPage2.Controls.Add(this.label30);
+            this.tabPage2.Controls.Add(this.UI_newmoviename);
+            this.tabPage2.Controls.Add(this.label25);
+            this.tabPage2.Controls.Add(this.label23);
             this.tabPage2.Controls.Add(this.UI_allmovies);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.UI_myndirekkiileigu);
@@ -509,9 +530,9 @@
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(346, 195);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(213, 15);
+            this.label16.Size = new System.Drawing.Size(283, 15);
             this.label16.TabIndex = 2;
-            this.label16.Text = "Allar myndir sem eru ekki í leigu";
+            this.label16.Text = "Allar myndir sem eru ekki í leigu (í búðinni)";
             // 
             // UI_myndirileigu
             // 
@@ -528,12 +549,16 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(6, 195);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(183, 15);
+            this.label15.Size = new System.Drawing.Size(295, 15);
             this.label15.TabIndex = 0;
-            this.label15.Text = "Allar myndir sem eru í leigu";
+            this.label15.Text = "Allar myndir sem eru í leigu(hjá viðskiptavini)";
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.returnamovie);
+            this.tabPage6.Controls.Add(this.label28);
+            this.tabPage6.Controls.Add(this.UI_returnamoviemynd);
+            this.tabPage6.Controls.Add(this.label27);
             this.tabPage6.Controls.Add(this.label22);
             this.tabPage6.Controls.Add(this.UI_athugasemd);
             this.tabPage6.Controls.Add(this.UI_pnafn);
@@ -556,43 +581,73 @@
             this.tabPage6.Text = "VideoLeigan";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // UI_Myndirtiladleigaut
+            // label22
             // 
-            this.UI_Myndirtiladleigaut.FormattingEnabled = true;
-            this.UI_Myndirtiladleigaut.Location = new System.Drawing.Point(103, 255);
-            this.UI_Myndirtiladleigaut.Name = "UI_Myndirtiladleigaut";
-            this.UI_Myndirtiladleigaut.Size = new System.Drawing.Size(214, 23);
-            this.UI_Myndirtiladleigaut.TabIndex = 0;
-            this.UI_Myndirtiladleigaut.SelectedIndexChanged += new System.EventHandler(this.UI_Myndirtiladleigaut_SelectedIndexChanged);
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(16, 296);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(79, 15);
+            this.label22.TabIndex = 13;
+            this.label22.Text = "Athugasemd:";
             // 
-            // label18
+            // UI_athugasemd
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(100, 191);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(115, 15);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "Rent out a movie";
+            this.UI_athugasemd.Location = new System.Drawing.Point(103, 284);
+            this.UI_athugasemd.Name = "UI_athugasemd";
+            this.UI_athugasemd.Size = new System.Drawing.Size(214, 53);
+            this.UI_athugasemd.TabIndex = 12;
+            this.UI_athugasemd.Text = "";
             // 
-            // button1
+            // UI_pnafn
             // 
-            this.button1.Location = new System.Drawing.Point(242, 343);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Rent";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.UI_pnafn.AutoSize = true;
+            this.UI_pnafn.Location = new System.Drawing.Point(100, 80);
+            this.UI_pnafn.Name = "UI_pnafn";
+            this.UI_pnafn.Size = new System.Drawing.Size(0, 15);
+            this.UI_pnafn.TabIndex = 11;
             // 
-            // label19
+            // label26
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(16, 258);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(40, 15);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "Mynd:";
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(28, 80);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(36, 15);
+            this.label26.TabIndex = 10;
+            this.label26.Text = "Nafn:";
+            // 
+            // UI_pkenni
+            // 
+            this.UI_pkenni.AutoSize = true;
+            this.UI_pkenni.Location = new System.Drawing.Point(100, 54);
+            this.UI_pkenni.Name = "UI_pkenni";
+            this.UI_pkenni.Size = new System.Drawing.Size(0, 15);
+            this.UI_pkenni.TabIndex = 9;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(28, 54);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(62, 15);
+            this.label24.TabIndex = 8;
+            this.label24.Text = "Kennitala:";
+            // 
+            // UI_pid
+            // 
+            this.UI_pid.AutoSize = true;
+            this.UI_pid.Location = new System.Drawing.Point(100, 28);
+            this.UI_pid.Name = "UI_pid";
+            this.UI_pid.Size = new System.Drawing.Size(0, 15);
+            this.UI_pid.TabIndex = 7;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(28, 28);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(22, 15);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "ID:";
             // 
             // label20
             // 
@@ -612,73 +667,163 @@
             this.UI_leigavidskiptavinur.TabIndex = 4;
             this.UI_leigavidskiptavinur.SelectedIndexChanged += new System.EventHandler(this.UI_leigavidskiptavinur_SelectedIndexChanged);
             // 
-            // label21
+            // label19
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(28, 28);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(22, 15);
-            this.label21.TabIndex = 6;
-            this.label21.Text = "ID:";
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(16, 258);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(40, 15);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "Mynd:";
             // 
-            // UI_pid
+            // button1
             // 
-            this.UI_pid.AutoSize = true;
-            this.UI_pid.Location = new System.Drawing.Point(100, 28);
-            this.UI_pid.Name = "UI_pid";
-            this.UI_pid.Size = new System.Drawing.Size(0, 15);
-            this.UI_pid.TabIndex = 7;
+            this.button1.Location = new System.Drawing.Point(242, 343);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Rent";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // UI_pkenni
+            // label18
             // 
-            this.UI_pkenni.AutoSize = true;
-            this.UI_pkenni.Location = new System.Drawing.Point(100, 54);
-            this.UI_pkenni.Name = "UI_pkenni";
-            this.UI_pkenni.Size = new System.Drawing.Size(0, 15);
-            this.UI_pkenni.TabIndex = 9;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(100, 191);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(115, 15);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "Rent out a movie";
             // 
-            // label24
+            // UI_Myndirtiladleigaut
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(28, 54);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(62, 15);
-            this.label24.TabIndex = 8;
-            this.label24.Text = "Kennitala:";
+            this.UI_Myndirtiladleigaut.FormattingEnabled = true;
+            this.UI_Myndirtiladleigaut.Location = new System.Drawing.Point(103, 255);
+            this.UI_Myndirtiladleigaut.Name = "UI_Myndirtiladleigaut";
+            this.UI_Myndirtiladleigaut.Size = new System.Drawing.Size(214, 23);
+            this.UI_Myndirtiladleigaut.TabIndex = 0;
+            this.UI_Myndirtiladleigaut.SelectedIndexChanged += new System.EventHandler(this.UI_Myndirtiladleigaut_SelectedIndexChanged);
             // 
-            // UI_pnafn
+            // label23
             // 
-            this.UI_pnafn.AutoSize = true;
-            this.UI_pnafn.Location = new System.Drawing.Point(100, 80);
-            this.UI_pnafn.Name = "UI_pnafn";
-            this.UI_pnafn.Size = new System.Drawing.Size(0, 15);
-            this.UI_pnafn.TabIndex = 11;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(396, 32);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(44, 15);
+            this.label23.TabIndex = 6;
+            this.label23.Text = "Name:";
             // 
-            // label26
+            // label25
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(28, 80);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(36, 15);
-            this.label26.TabIndex = 10;
-            this.label26.Text = "Nafn:";
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(376, 14);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(61, 15);
+            this.label25.TabIndex = 7;
+            this.label25.Text = "Ný mynd";
             // 
-            // UI_athugasemd
+            // label27
             // 
-            this.UI_athugasemd.Location = new System.Drawing.Point(103, 284);
-            this.UI_athugasemd.Name = "UI_athugasemd";
-            this.UI_athugasemd.Size = new System.Drawing.Size(214, 53);
-            this.UI_athugasemd.TabIndex = 12;
-            this.UI_athugasemd.Text = "";
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(446, 191);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(104, 15);
+            this.label27.TabIndex = 14;
+            this.label27.Text = "Return a movie";
             // 
-            // label22
+            // UI_returnamoviemynd
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(16, 296);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(79, 15);
-            this.label22.TabIndex = 13;
-            this.label22.Text = "Athugasemd:";
+            this.UI_returnamoviemynd.FormattingEnabled = true;
+            this.UI_returnamoviemynd.Location = new System.Drawing.Point(470, 219);
+            this.UI_returnamoviemynd.Name = "UI_returnamoviemynd";
+            this.UI_returnamoviemynd.Size = new System.Drawing.Size(121, 23);
+            this.UI_returnamoviemynd.TabIndex = 15;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(424, 222);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(40, 15);
+            this.label28.TabIndex = 16;
+            this.label28.Text = "Mynd:";
+            // 
+            // returnamovie
+            // 
+            this.returnamovie.Location = new System.Drawing.Point(490, 254);
+            this.returnamovie.Name = "returnamovie";
+            this.returnamovie.Size = new System.Drawing.Size(101, 23);
+            this.returnamovie.TabIndex = 17;
+            this.returnamovie.Text = "Return Movie";
+            this.returnamovie.UseVisualStyleBackColor = true;
+            this.returnamovie.Click += new System.EventHandler(this.returnamovie_Click);
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.label29);
+            this.tabPage7.Controls.Add(this.UI_skilautdagur);
+            this.tabPage7.Location = new System.Drawing.Point(4, 24);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(724, 426);
+            this.tabPage7.TabIndex = 3;
+            this.tabPage7.Text = "Skiladagur/Utdagur";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // UI_skilautdagur
+            // 
+            this.UI_skilautdagur.FormattingEnabled = true;
+            this.UI_skilautdagur.ItemHeight = 15;
+            this.UI_skilautdagur.Location = new System.Drawing.Point(6, 43);
+            this.UI_skilautdagur.Name = "UI_skilautdagur";
+            this.UI_skilautdagur.Size = new System.Drawing.Size(712, 379);
+            this.UI_skilautdagur.TabIndex = 0;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(30, 24);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(425, 15);
+            this.label29.TabIndex = 1;
+            this.label29.Text = "Skiladagur og Utdagur bara hja þeim sem eru ekki buinir ad skila";
+            // 
+            // UI_newmoviename
+            // 
+            this.UI_newmoviename.Location = new System.Drawing.Point(446, 29);
+            this.UI_newmoviename.Name = "UI_newmoviename";
+            this.UI_newmoviename.Size = new System.Drawing.Size(100, 21);
+            this.UI_newmoviename.TabIndex = 8;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(355, 61);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(85, 15);
+            this.label30.TabIndex = 9;
+            this.label30.Text = "Release Date:";
+            // 
+            // UI_newmovierelease
+            // 
+            this.UI_newmovierelease.Location = new System.Drawing.Point(446, 56);
+            this.UI_newmovierelease.Name = "UI_newmovierelease";
+            this.UI_newmovierelease.Size = new System.Drawing.Size(200, 21);
+            this.UI_newmovierelease.TabIndex = 10;
+            // 
+            // newmovie
+            // 
+            this.newmovie.Location = new System.Drawing.Point(483, 83);
+            this.newmovie.Name = "newmovie";
+            this.newmovie.Size = new System.Drawing.Size(75, 23);
+            this.newmovie.TabIndex = 11;
+            this.newmovie.Text = "Ný mynd";
+            this.newmovie.UseVisualStyleBackColor = true;
+            this.newmovie.Click += new System.EventHandler(this.newmovie_Click);
             // 
             // Form1
             // 
@@ -702,6 +847,8 @@
             this.tabPage2.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -767,6 +914,19 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.RichTextBox UI_athugasemd;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button returnamovie;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox UI_returnamoviemynd;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.ListBox UI_skilautdagur;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox UI_newmoviename;
+        private System.Windows.Forms.Button newmovie;
+        private System.Windows.Forms.DateTimePicker UI_newmovierelease;
     }
 }
 

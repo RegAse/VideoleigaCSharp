@@ -8,3 +8,12 @@ C:\Users\Guðmundur\Documents\Visual Studio 2013\Projects\FOR2B2U\Heimaverkefni4
 C:\Users\Guðmundur\Documents\Visual Studio 2013\Projects\FOR2B2U\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.csproj.GenerateResource.Cache
 C:\Users\Guðmundur\Documents\Visual Studio 2013\Projects\FOR2B2U\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.exe
 C:\Users\Guðmundur\Documents\Visual Studio 2013\Projects\FOR2B2U\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.pdb
+N:\Heimaverkefni4\Heimaverkefni4\bin\Debug\Heimaverkefni4.exe.config
+N:\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.exe
+N:\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.pdb
+N:\Heimaverkefni4\Heimaverkefni4\bin\Debug\Heimaverkefni4.exe
+N:\Heimaverkefni4\Heimaverkefni4\bin\Debug\Heimaverkefni4.pdb
+N:\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.csprojResolveAssemblyReference.cache
+N:\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.Form1.resources
+N:\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.Properties.Resources.resources
+N:\Heimaverkefni4\Heimaverkefni4\obj\Debug\Heimaverkefni4.csproj.GenerateResource.Cache
